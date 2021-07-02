@@ -20,7 +20,7 @@ app.use(express.json())
 app.use('/api',routes)
 
 //starting the server at the port of your choice 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log("app is listening at port", port)
 })
 
